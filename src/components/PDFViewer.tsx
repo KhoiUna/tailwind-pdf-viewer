@@ -4,7 +4,6 @@ import { RenderParameters } from "pdfjs-dist/types/src/display/api";
 import { useEffect, useState } from "react";
 import { isMobile } from "react-device-detect";
 import TextLoader from "./ui/TextLoader";
-const pdfWorker = require("../lib/pdf.worker.cjs");
 
 interface PDFViewProps {
   pdfURL: string;
@@ -25,19 +24,19 @@ const PDFViewer = ({ pdfURL }: PDFViewProps) => {
       "hidden";
     setPDFIsLoading(true);
 
-    GlobalWorkerOptions.workerSrc = pdfWorker;
+    GlobalWorkerOptions.workerSrc = "/pdf.worker.js";
 
     const loadingTask = getDocument(pdfURL);
     loadingTask.promise.then(
       (pdf) => {
-        console.log("PDF loaded");
+        console.log("Tailwind PDFViewer: PDF loaded");
 
         // Set pagesInPDF equal to number of pages in PDF
         setMaxPagesInPDF(pdf.numPages);
 
         // Fetch the first page
         pdf.getPage(currentPage).then((page) => {
-          console.log("PDF page loaded");
+          console.log("Tailwind PDFViewer: PDF page loaded");
 
           const scale = pdfZoom;
           const viewport = page.getViewport({ scale });
@@ -57,7 +56,7 @@ const PDFViewer = ({ pdfURL }: PDFViewProps) => {
           };
           const renderTask = page.render(renderContext as RenderParameters);
           renderTask.promise.then(() => {
-            console.log("PDF rendered");
+            console.log("Tailwind PDFViewer: PDF rendered");
             setPDFIsLoading(false);
           });
         });
