@@ -7,7 +7,7 @@ const config = {
     lib: {
       entry: path.resolve(__dirname, "src/components/PDFViewer.tsx"),
       name: "Tailwind PDF Viewer",
-      fileName: "index.js",
+      fileName: "index",
     },
     rollupOptions: {
       external: ["react", "react-dom"],

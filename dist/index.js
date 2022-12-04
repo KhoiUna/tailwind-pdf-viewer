@@ -17,6 +17,7 @@ var C = (a, e, n) => (gt(a, e, "read from private field"), n ? n.call(a) : e.get
   }
 }), me = (a, e, n) => (gt(a, e, "access private method"), n);
 import React$1, { useState, useEffect } from "react";
+const PDFViewer$1 = "";
 var commonjsGlobal = typeof globalThis < "u" ? globalThis : typeof window < "u" ? window : typeof global < "u" ? global : typeof self < "u" ? self : {};
 function getAugmentedNamespace(a) {
   var e = a.default;
