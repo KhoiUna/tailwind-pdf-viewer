@@ -9,6 +9,10 @@
     "PDF Viewer",
     "React"
   ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/KhoiUna/tailwind-pdf-viewer.git"
+  },
   "type": "module",
   "scripts": {
     "dev": "vite",
