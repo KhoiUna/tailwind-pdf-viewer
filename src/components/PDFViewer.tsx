@@ -1,3 +1,4 @@
+import "./PDFViewer.css";
 import { Icon } from "@iconify/react";
 import { getDocument, GlobalWorkerOptions } from "pdfjs-dist";
 import { RenderParameters } from "pdfjs-dist/types/src/display/api";
