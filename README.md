@@ -1,1 +1,1 @@
-# React Tailwind PDF Viewer
+# Tailwind PDF Viewer
