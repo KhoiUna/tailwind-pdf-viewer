@@ -1,7 +1,24 @@
-import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react'
+import { defineConfig } from "vite";
+import react from "@vitejs/plugin-react";
+import path from "path";
 
-// https://vitejs.dev/config/
-export default defineConfig({
-  plugins: [react()]
-})
+const config = {
+  build: {
+    lib: {
+      entry: path.resolve(__dirname, "src/components/PDFViewer.tsx"),
+      name: "Tailwind PDF Viewer",
+      fileName: (format: string) => `PDFViewer.${format}.js`,
+    },
+    rollupOptions: {
+      external: ["react", "react-dom"],
+      output: {
+        globals: {
+          react: "React",
+        },
+      },
+    },
+  },
+  plugins: [react()],
+};
+
+export default defineConfig(config);
