@@ -4,6 +4,7 @@ import { RenderParameters } from "pdfjs-dist/types/src/display/api";
 import { useEffect, useState } from "react";
 import { isMobile } from "react-device-detect";
 import TextLoader from "./ui/TextLoader";
+const pdfWorker = require("../lib/pdf.worker.cjs");
 
 interface PDFViewProps {
   pdfURL: string;
@@ -24,8 +25,7 @@ const PDFViewer = ({ pdfURL }: PDFViewProps) => {
       "hidden";
     setPDFIsLoading(true);
 
-    GlobalWorkerOptions.workerSrc =
-      "https://cdn.jsdelivr.net/npm/pdfjs-dist@3.1.81/build/pdf.worker.js";
+    GlobalWorkerOptions.workerSrc = pdfWorker;
 
     const loadingTask = getDocument(pdfURL);
     loadingTask.promise.then(
