@@ -3,7 +3,7 @@ import { getDocument, GlobalWorkerOptions } from "pdfjs-dist";
 import { RenderParameters } from "pdfjs-dist/types/src/display/api";
 import { useEffect, useState } from "react";
 import { isMobile } from "react-device-detect";
-import TextLoader from "../components/ui/TextLoader";
+import TextLoader from "./ui/TextLoader";
 
 interface PDFViewProps {
   pdfURL: string;

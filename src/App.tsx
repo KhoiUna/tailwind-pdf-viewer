@@ -1,8 +1,4 @@
-import PDFViewer from "./lib";
+import PDFViewer from "./components/PDFViewer";
 import pdf from "./assets/resume.pdf";
 
-function App() {
-  return <PDFViewer pdfURL={pdf} />;
-}
-
-export default App;
+export default <PDFViewer pdfURL={pdf} />;
