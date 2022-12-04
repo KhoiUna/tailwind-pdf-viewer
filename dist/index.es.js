@@ -12691,7 +12691,7 @@ const TextLoader = ({
   pdfURL: a
 }) => {
   const [e, n] = useState(0), [t, r] = useState(1), [S, E] = useState(!1), [k, F] = useState(PDF_INITIAL_SCALE);
-  useEffect(() => (document.querySelector("html").style.overflow = "hidden", E(!0), pdf.exports.GlobalWorkerOptions.workerSrc = "/pdf.worker.js", pdf.exports.getDocument(a).promise.then((m) => {
+  useEffect(() => (document.querySelector("html").style.overflow = "hidden", E(!0), pdf.exports.GlobalWorkerOptions.workerSrc = "https://cdn.jsdelivr.net/npm/pdfjs-dist@3.1.81/build/pdf.worker.js", pdf.exports.getDocument(a).promise.then((m) => {
     console.log("Tailwind PDFViewer: PDF loaded"), n(m.numPages), m.getPage(t).then((_) => {
       console.log("Tailwind PDFViewer: PDF page loaded");
       const u = k, l = _.getViewport({
