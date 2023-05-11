@@ -114,9 +114,8 @@ const PDFViewer = ({ pdfURL }: PDFViewProps) => {
 
       {/* PDF canvas */}
       <div
-        className={`bg-stone-400 m-auto p-3 pb-[14rem] overflow-auto w-full h-screen ${
-          pdfIsLoading && pdfZoom === 0 ? "invisible" : "visible"
-        }`}
+        className={`bg-stone-400 m-auto p-3 pb-[14rem] overflow-auto w-full h-screen ${pdfIsLoading && pdfZoom === 0 ? "invisible" : "visible"
+          }`}
       >
         <canvas
           id="the-canvas"
@@ -133,9 +132,8 @@ const PDFViewer = ({ pdfURL }: PDFViewProps) => {
             onClick={() => handleClick("PREVIOUS_PAGE")}
           >
             <span
-              className={`text-md ${
-                currentPage === 1 && "text-slate-400"
-              } text-white`}
+              className={`text-md ${currentPage === 1 && "text-slate-400"
+                } text-white`}
             >
               Back
             </span>
@@ -153,9 +151,8 @@ const PDFViewer = ({ pdfURL }: PDFViewProps) => {
             onClick={() => handleClick("NEXT_PAGE")}
           >
             <span
-              className={`text-md text-white ${
-                currentPage === maxPagesInPDF && "text-slate-400"
-              }`}
+              className={`text-md text-white ${currentPage === maxPagesInPDF && "text-slate-400"
+                }`}
             >
               Next
             </span>
@@ -163,9 +160,8 @@ const PDFViewer = ({ pdfURL }: PDFViewProps) => {
 
           <button
             type="button"
-            className={`text-white text-[2rem] px-3 ${
-              pdfZoom <= PDF_INITIAL_SCALE ? "text-[silver]" : "text-white"
-            }`}
+            className={`text-white text-[2rem] px-3 ${pdfZoom <= PDF_INITIAL_SCALE ? "text-[silver]" : "text-white"
+              }`}
             onClick={() => handleZoom("ZOOM_OUT")}
           >
             <Icon icon="material-symbols:zoom-out" />
@@ -173,9 +169,8 @@ const PDFViewer = ({ pdfURL }: PDFViewProps) => {
 
           <button
             type="button"
-            className={`text-[2rem] px-3 ${
-              pdfZoom >= PDF_MAX_ZOOM ? "text-[silver]" : "text-white"
-            }`}
+            className={`text-[2rem] px-3 ${pdfZoom >= PDF_MAX_ZOOM ? "text-[silver]" : "text-white"
+              }`}
             onClick={() => handleZoom("ZOOM_IN")}
           >
             <Icon icon="material-symbols:zoom-in" />
