@@ -1,6 +1,6 @@
 {
   "name": "tailwind-pdf-viewer",
-  "version": "0.1.3",
+  "version": "0.1.5",
   "description": "PDF Viewer made with React and Tailwind CSS.",
   "license": "MIT",
   "author": "Khoi Tuan Nguyen",
