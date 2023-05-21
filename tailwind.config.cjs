@@ -5,5 +5,5 @@ module.exports = {
     extend: {},
   },
   plugins: [],
-  important: "#pdf-viewer",
+  important: "#tailwind-pdf-viewer",
 };
