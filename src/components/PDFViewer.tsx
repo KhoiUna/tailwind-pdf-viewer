@@ -102,7 +102,7 @@ const PDFViewer = ({ pdfURL }: PDFViewProps) => {
   };
 
   return (
-    <div id="pdf-viewer">
+    <div id="tailwind-pdf-viewer">
       {/* Only show loader when PDF is loaded for the 1st time */}
       {pdfIsLoading && pdfZoom === PDF_INITIAL_SCALE && (
         <div className="bg-stone-400 m-auto p-3 pb-20 sm:pb-[7.5rem] overflow-auto w-full sm:h-[750px] h-[500px]">
